@@ -11,12 +11,20 @@ public class MovementBehaviour : MonoBehaviour
     [SerializeField] private bool checkYSpeed = false;
     [SerializeField] private bool rotateWithMovement = true;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private List<Animator> animators;
 
     [HideInInspector] public bool canMove = true;
 
     public void Move(Vector3 movementDirection)
     {
-        if (!canMove) return;
+        if (!canMove) 
+        {
+            animators.ForEach(animator => animator.SetBool("is_walking", false));
+            rb.velocity = new(0f, rb.velocity.y, 0f);
+            return;
+        }
+
+        animators.ForEach(animator => animator.SetBool("is_walking", movementDirection.magnitude != 0));
 
         // If no movement, then stop except jump velocity
         if (movementDirection.magnitude == 0)
@@ -49,5 +57,29 @@ public class MovementBehaviour : MonoBehaviour
                 rb.velocity = newVelocity;
             }
         }
+    }
+
+    public bool MoveToPosition(Vector3 objective)
+    {
+        if (!canMove) return true;
+
+        Vector3 newPosition = Vector3.MoveTowards(transform.position, objective, maxSpeed * Time.fixedDeltaTime);
+        transform.position = newPosition;
+
+        // Rotate character
+        if (rotateWithMovement && !Vector3.zero.Equals(objective - transform.position))
+        {
+            Quaternion rotation = Quaternion.LookRotation(objective - transform.position);
+            rb.MoveRotation(rotation);
+        }
+
+        bool objectiveReached = newPosition == objective;
+        animators.ForEach(animator => animator.SetBool("is_walking", !objectiveReached));
+        return objectiveReached;
+    }
+
+    public void SetAnimators(List<Animator> animators)
+    {
+        this.animators = new(animators);
     }
 }

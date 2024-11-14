@@ -11,13 +11,14 @@ public class DialogueBehaviour : InteractiveItem
     {
         base.OnInteract(objectThatInteract);
         objectThatInteract.playerController.LockPlayer();
-        Coroutine dialogueCoroutine = dialogueController.StartDialogue(fileName);
-        StartCoroutine(WaitToUnlockPlayer(dialogueCoroutine));
+        StartCoroutine(StartDialogue());
     }
 
-    IEnumerator WaitToUnlockPlayer(Coroutine dialogueCoroutine)
+    IEnumerator StartDialogue()
     {
-        yield return dialogueCoroutine;
+        yield return new WaitUntil(() => objectThatInteract.playerController.IsOnFloor());
+        objectThatInteract.playerController.LockPlayer();
+        yield return dialogueController.StartDialogue(fileName);
         objectThatInteract.playerController.UnlockPlayer();
     }
 }

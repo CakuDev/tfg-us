@@ -676,14 +676,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212eaaa02a634324899c5526eb94680f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: test
+  fileName: test_cinematic
   dialogueController: {fileID: 1884696935}
 --- !u!114 &1884696935 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9151396962867008339, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
   m_PrefabInstance: {fileID: 1819452332410025009}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1819452332410025010}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46a3eaf8cc105ca4b8dacadfb9c4bbf6, type: 3}
@@ -874,11 +874,43 @@ PrefabInstance:
       propertyPath: defaultSpeed
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 9151396962867008339, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+      propertyPath: skipTextSpeed
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151396962867008339, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+      propertyPath: dialogueParser
+      value: 
+      objectReference: {fileID: 1819452332410025011}
+    - target: {fileID: 9151396962867008339, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+      propertyPath: defaultTextSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4230214704400896525, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1819452332410025011}
   m_SourcePrefab: {fileID: 100100000, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+--- !u!1 &1819452332410025010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4230214704400896525, guid: 84f490c16e7327649af2af1990ee4dce, type: 3}
+  m_PrefabInstance: {fileID: 1819452332410025009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819452332410025011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819452332410025010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5596c43a1c409d944b68c8ce33174cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4689882763956222725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,7 +1054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2837551272828195569, guid: 1f6103e8bf4ae2442818a87e53917e97, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8488632648253934713, guid: 1f6103e8bf4ae2442818a87e53917e97, type: 3}
       propertyPath: player

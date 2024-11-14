@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InteractBehaviour interactBehaviour;
     [SerializeField] private Transform models;
 
-    private List<Animator> animators = new ();
-
     private void Start()
     {
         GameController gameController = SingletonBehaviour.GetEntity(SingletonBehaviour.GAME_CONTROLLER).GetComponent<GameController>();
@@ -35,7 +33,6 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         movement.Normalize();
         movementBehaviour.Move(movement);
-        SetBooleanAnimatorValue("is_walking", movement.magnitude != 0);
     }
 
     private void ManageJump()
@@ -43,17 +40,11 @@ public class PlayerController : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Space)) return;
 
         jumpBehaviour.Jump();
-        SetBooleanAnimatorValue("is_jumping", true);
     }
 
     private void ManageInteract()
     {
         if (Input.GetKeyDown(KeyCode.E)) interactBehaviour.Interact();
-    }
-
-    private void SetBooleanAnimatorValue(string parameterName, bool value)
-    {
-        animators.ForEach(animator => animator.SetBool(parameterName, value));
     }
 
     public void LockPlayer()
@@ -72,14 +63,18 @@ public class PlayerController : MonoBehaviour
 
     public void InitAnimators()
     {
+        List<Animator> animators = new ();
         foreach (Transform child in models)
         {
             animators.Add(child.gameObject.GetComponent<Animator>());
         }
+
+        movementBehaviour.SetAnimators(animators);
+        jumpBehaviour.SetAnimators(animators);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public bool IsOnFloor()
     {
-        if (collision.transform.CompareTag("Floor")) SetBooleanAnimatorValue("is_jumping", false);
+        return jumpBehaviour.isOnFloor;
     }
 }
