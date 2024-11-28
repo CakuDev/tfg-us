@@ -8,7 +8,7 @@ public class JumpBehaviour : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private List<Animator> animators;
 
-    [HideInInspector] public bool canJump = true;
+    public bool canJump = true;
     [HideInInspector] public bool isOnFloor = true;
 
     public void Jump()

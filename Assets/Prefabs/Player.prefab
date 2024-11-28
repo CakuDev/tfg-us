@@ -121,6 +121,7 @@ MonoBehaviour:
   checkYSpeed: 0
   rotateWithMovement: 1
   rb: {fileID: 1990931739043140915}
+  animators: []
   canMove: 1
 --- !u!114 &3785630254969280923
 MonoBehaviour:
@@ -136,7 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 5
   rb: {fileID: 1990931739043140915}
-  canJump: 1
+  animators: []
+  canJump: 0
+  isOnFloor: 1
 --- !u!1 &7859497818240437700
 GameObject:
   m_ObjectHideFlags: 0
