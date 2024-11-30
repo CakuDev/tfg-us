@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 65397560377365680}
   - component: {fileID: 5291688668044204769}
   - component: {fileID: 6531313456773066956}
+  - component: {fileID: 656869524430516359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7261985476001174361}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.30070576, y: -0, z: 2.3283062e-10, w: 0.95371693}
+  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
   m_LocalPosition: {x: 0, y: 2.29, z: -2.8600008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -42,8 +43,8 @@ Camera:
   m_GameObject: {fileID: 7261985476001174361}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 1
@@ -64,9 +65,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
-  field of view: 58.683735
+  field of view: 35.96103
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -92,3 +93,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7261985476001174361}
   m_Enabled: 1
+--- !u!114 &656869524430516359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261985476001174361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28c3a0c1b54e5a46babc9e406a8d73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveOnX: 1
+  moveOnY: 0
+  moveOnZ: 1
+  objectToFollow: {fileID: 0}
+  offset: {x: 0, y: 6, z: -4.3}
