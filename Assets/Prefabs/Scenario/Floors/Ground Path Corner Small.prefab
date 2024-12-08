@@ -53,6 +53,10 @@ PrefabInstance:
       value: Ground Path Corner Small
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 17f69e246907f4b40a338e1a516e175e, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 17f69e246907f4b40a338e1a516e175e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

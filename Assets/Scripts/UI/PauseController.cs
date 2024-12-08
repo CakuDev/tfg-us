@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseController : MonoBehaviour
 {
+    [SerializeField] string exitScene;
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject optionsCanvas;
     [SerializeField] SceneController sceneController;
@@ -28,6 +29,6 @@ public class PauseController : MonoBehaviour
     public void OnExit()
     {
         Time.timeScale = 1f;
-        sceneController.ChangeScene(0);
+        sceneController.ChangeScene(exitScene);
     }
 }

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         movement.Normalize();
-        movementBehaviour.Move(movement);
+        if(!jumpBehaviour.canJump) movementBehaviour.Move(movement);
     }
 
     private void ManageJump()
@@ -50,14 +50,12 @@ public class PlayerController : MonoBehaviour
     public void LockPlayer()
     {
         movementBehaviour.canMove = false;
-        jumpBehaviour.canJump = false;
         interactBehaviour.canInteract = false;
     }
 
     public void UnlockPlayer()
     {
         movementBehaviour.canMove = true;
-        jumpBehaviour.canJump = true;
         interactBehaviour.canInteract = true;
     }
 

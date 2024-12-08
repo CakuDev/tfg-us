@@ -53,6 +53,10 @@ PrefabInstance:
       value: Ground Path Side Open
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 99c6ca16d5aaa9a4e8f9a22fad828685, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99c6ca16d5aaa9a4e8f9a22fad828685, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

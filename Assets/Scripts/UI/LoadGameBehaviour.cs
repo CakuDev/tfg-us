@@ -17,7 +17,7 @@ public class LoadGameBehaviour : MonoBehaviour
 
     public void LoadGame()
     {
-        gameController.previousScene = PlayerPrefs.GetInt(PersistentDataIndex.PREVIOUS_SCENE);
-        sceneController.ChangeScene(PlayerPrefs.GetInt(PersistentDataIndex.SCENE_TO_LOAD));
+        gameController.previousScene = PlayerPrefs.GetString(PersistentDataIndex.PREVIOUS_SCENE);
+        sceneController.ChangeScene(PlayerPrefs.GetString(PersistentDataIndex.SCENE_TO_LOAD));
     }
 }

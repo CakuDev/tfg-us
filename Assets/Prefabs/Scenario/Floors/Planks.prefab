@@ -53,6 +53,10 @@ PrefabInstance:
       value: Planks
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ed59efb557bbb3143afaaa794ed2d3d2, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed59efb557bbb3143afaaa794ed2d3d2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

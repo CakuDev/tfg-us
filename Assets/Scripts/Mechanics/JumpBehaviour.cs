@@ -5,30 +5,31 @@ using UnityEngine;
 public class JumpBehaviour : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private Vector3 jumpDirection;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private List<Animator> animators;
 
-    public bool canJump = true;
+    public bool canJump = false;
     [HideInInspector] public bool isOnFloor = true;
 
     public void Jump()
     {
-        if (!canJump) return;
+        if (!isOnFloor || !canJump) return;
 
         animators.ForEach(animator => animator.SetBool("is_jumping", true));
-        rb.AddForce(jumpForce * Vector3.up,ForceMode.Impulse);
-        canJump = false;
+        rb.velocity = Vector3.zero;
+        rb.AddForce(jumpForce * jumpDirection.normalized,ForceMode.Impulse);
         isOnFloor = false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Floor"))
-        {
-            animators.ForEach(animator => animator.SetBool("is_jumping", false));
-            canJump = true;
-            isOnFloor = true;
-        }
+        if (isOnFloor) return;
+        if (!collision.transform.CompareTag("Floor") && !collision.transform.CompareTag("Trunk")) return;
+        
+        animators.ForEach(animator => animator.SetBool("is_jumping", false));
+        isOnFloor = true;
+        rb.velocity = Vector3.zero;
     }
 
     public void SetAnimators(List<Animator> animators)

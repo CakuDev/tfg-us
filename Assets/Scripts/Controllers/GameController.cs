@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public List<GameObject> playerHeads = new();
     public List<GameObject> playerBodies = new();
 
-    [HideInInspector] public int previousScene = -1;
+    [HideInInspector] public string previousScene = "";
     public int currentHead = -1;
     public int currentBody = -1;
     public string playerName = "";

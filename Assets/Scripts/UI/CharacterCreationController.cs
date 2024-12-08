@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 
 public class CharacterCreationController : MonoBehaviour
 {
+    [SerializeField] private string nextScene;
     [SerializeField] private TMP_InputField nameInput;
     [SerializeField] private ToggleGroup genderToggleGroup;
     [SerializeField] private Transform headContainer;
@@ -79,6 +80,6 @@ public class CharacterCreationController : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt(PersistentDataIndex.SAVE_GAME, 1);
 
-        sceneController.ChangeScene(1);
+        sceneController.ChangeScene(nextScene);
     }
 }

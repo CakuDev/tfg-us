@@ -12,6 +12,8 @@ public class FollowObject : MonoBehaviour
 
     private void Update()
     {
+        if(objectToFollow == null) return;
+
         Vector3 position = transform.position;
         if (moveOnX) position.x = objectToFollow.position.x + offset.x;
         if (moveOnY) position.y = objectToFollow.position.y + offset.y;

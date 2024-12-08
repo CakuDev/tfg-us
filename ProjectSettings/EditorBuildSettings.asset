@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Village.unity
-    guid: 6d6f00cbfe823d8498a23d2ac530c170
-  - enabled: 1
     path: Assets/Scenes/Bedroom.unity
     guid: 46d00b0247c959f41953fe13c7d145d9
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 0705e201c0de3734dacf49d385da7873
+    path: Assets/Scenes/Living Room.unity
+    guid: 3f580cc4c935fa94cab0636a7a6b4450
   - enabled: 1
-    path: Assets/Scenes/ChangeTestScene.unity
-    guid: ac99618dcfdbd5f498af709da177d330
+    path: Assets/Scenes/Village.unity
+    guid: 6d6f00cbfe823d8498a23d2ac530c170
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: df844acb8f9c4cf4e97f6e1fc581e839
   m_configObjects: {}

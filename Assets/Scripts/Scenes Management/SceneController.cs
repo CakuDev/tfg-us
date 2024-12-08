@@ -9,7 +9,7 @@ using UnityEngine.UI;
 [Serializable]
 public struct SpawnPoint
 {
-    public int previousScene;
+    public string previousScene;
     public Transform position;
 }
 
@@ -22,7 +22,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] Image changeSceneImage;
 
     private GameController gameController;
-    private Dictionary<int, Transform> spawnPointsDict = new();
+    private Dictionary<string, Transform> spawnPointsDict = new();
 
     private void Awake()
     {
@@ -38,27 +38,29 @@ public class SceneController : MonoBehaviour
         gameController = SingletonBehaviour.GetEntity(SingletonBehaviour.GAME_CONTROLLER).GetComponent<GameController>();
 
         // If there is a previous scene, load its corresponding player position
-        if ( player != null && gameController.previousScene != -1 && spawnPointsDict.ContainsKey(gameController.previousScene))
+        if ( player != null && gameController.previousScene != "" && spawnPointsDict.ContainsKey(gameController.previousScene))
         {
             player.transform.position = spawnPointsDict[gameController.previousScene].position;
+            player.transform.rotation = spawnPointsDict[gameController.previousScene].rotation;
         }
 
         if(saveSceneDataOnLoad)
         {
-            PlayerPrefs.SetInt(PersistentDataIndex.PREVIOUS_SCENE, gameController.previousScene);
-            PlayerPrefs.SetInt(PersistentDataIndex.SCENE_TO_LOAD, SceneManager.GetActiveScene().buildIndex);
+            PlayerPrefs.SetString(PersistentDataIndex.PREVIOUS_SCENE, gameController.previousScene);
+            PlayerPrefs.SetString(PersistentDataIndex.SCENE_TO_LOAD, SceneManager.GetActiveScene().name);
         }
 
         StartCoroutine(OnLoadScene());
+        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
-    public void ChangeScene(int nextScene)
+    public void ChangeScene(string nextScene)
     {
-        gameController.previousScene = SceneManager.GetActiveScene().buildIndex;
+        gameController.previousScene = SceneManager.GetActiveScene().name;
         StartCoroutine(OnChangeScene(nextScene));
     }
 
-    IEnumerator OnChangeScene(int nextScene)
+    IEnumerator OnChangeScene(string nextScene)
     {
         if (player != null) player.LockPlayer();
 
