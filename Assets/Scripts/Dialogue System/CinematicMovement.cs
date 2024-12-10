@@ -19,6 +19,7 @@ public class CinematicMovement : CinematicItem
     public override IEnumerator Action()
     {
         objectToMove.canMove = true;
+        Debug.Log("Position to move: " + positionToMove);
         while (!objectToMove.MoveToPosition(positionToMove))
         {
             yield return new WaitForFixedUpdate();

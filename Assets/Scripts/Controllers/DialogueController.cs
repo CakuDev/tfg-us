@@ -25,7 +25,7 @@ public class DialogueController : MonoBehaviour
 
     public Coroutine StartDialogue(string fileName)
     {
-        string filePath = Application.dataPath + DIALOGUE_FOLDER + fileName + "_" + gameController.playerGender.ToString().ToLower() + ".txt";
+        string filePath = Application.dataPath + DIALOGUE_FOLDER + fileName + "/" + gameController.playerGender.ToString().ToLower() + ".txt";
         List<CinematicItem> dialogueLines = ReadDialogueFile(filePath);
         dialogueCanvas.SetActive(true);
         return StartCoroutine(ShowDialogue(dialogueLines));

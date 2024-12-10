@@ -13,7 +13,7 @@ public class MovementBehaviour : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private List<Animator> animators;
 
-    [HideInInspector] public bool canMove = true;
+    public bool canMove = true;
 
     public void Move(Vector3 movementDirection)
     {
@@ -81,5 +81,10 @@ public class MovementBehaviour : MonoBehaviour
     public void SetAnimators(List<Animator> animators)
     {
         this.animators = new(animators);
+    }
+
+    public void Stop()
+    {
+        rb.velocity = Vector3.zero;
     }
 }

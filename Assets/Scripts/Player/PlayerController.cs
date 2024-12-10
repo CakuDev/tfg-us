@@ -9,17 +9,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InteractBehaviour interactBehaviour;
     [SerializeField] private Transform models;
 
+    private bool movementBlocked = false;
+
     private void Start()
     {
         GameController gameController = SingletonBehaviour.GetEntity(SingletonBehaviour.GAME_CONTROLLER).GetComponent<GameController>();
         Instantiate(gameController.GetCurrentHead(), models);
         Instantiate(gameController.GetCurrentBody(), models);
         InitAnimators();
+        interactBehaviour.playerController = this;
     }
 
     void FixedUpdate()
     {
-        ManageMovement();
+        if(!movementBlocked) ManageMovement();
     }
 
     private void Update()
@@ -51,12 +54,15 @@ public class PlayerController : MonoBehaviour
     {
         movementBehaviour.canMove = false;
         interactBehaviour.canInteract = false;
+        movementBlocked = true;
+        movementBehaviour.Stop();
     }
 
     public void UnlockPlayer()
     {
         movementBehaviour.canMove = true;
         interactBehaviour.canInteract = true;
+        movementBlocked = false;
     }
 
     public void InitAnimators()
