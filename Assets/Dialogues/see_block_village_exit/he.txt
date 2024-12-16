@@ -1,9 +1,10 @@
 hide_canvas
+move||Player||23,5;_;9,7
 move||Player||23,5;_;9,8
 dialogue||player_name||¿Qué es esta cosa que bloquea la salida del pueblo?
 dialogue||¿?||Es un bloqueo creado por el monstruo de la depresión para evitar que salgas del pueblo.
 dialogue||player_name||¿Quién ha dicho eso?
 hide_canvas
-move||Fairy||23,5;0,65;10,2
-move||Fairy||23,5;0,65;10,1
+move||Fairy Object||23,5;0,65;10,15
+move||Fairy Object||23,5;0,65;10,1
 dialogue||Hada||Soy un hada que quiere ayudarte a superar los desafíos que vas a encontrarte en tu camino.

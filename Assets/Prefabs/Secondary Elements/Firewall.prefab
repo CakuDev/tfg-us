@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 99792802952496134}
   m_Layer: 0
   m_Name: Firewall
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

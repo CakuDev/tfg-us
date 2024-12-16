@@ -9,22 +9,26 @@ public class CinematicMovement : CinematicItem
 
     private MovementBehaviour objectToMove;
     private Vector3 positionToMove;
+    private bool checkX;
+    private bool checkY;
+    private bool checkZ;
 
-    public CinematicMovement(MovementBehaviour objectToMove, Vector3 positionToMove)
+    public CinematicMovement(MovementBehaviour objectToMove, Vector3 positionToMove, bool checkX, bool checkY, bool checkZ)
     {
         this.objectToMove = objectToMove;
         this.positionToMove = positionToMove;
+        this.checkX = checkX;
+        this.checkY = checkY;
+        this.checkZ = checkZ;
     }
 
     public override IEnumerator Action()
     {
         objectToMove.canMove = true;
-        Debug.Log("Position to move: " + positionToMove);
-        while (!objectToMove.MoveToPosition(positionToMove))
+        while (!objectToMove.MoveToPosition(positionToMove, checkX, checkY, checkZ))
         {
             yield return new WaitForFixedUpdate();
         }
-        objectToMove.transform.position = positionToMove;
         objectToMove.canMove = false;
     }
 }

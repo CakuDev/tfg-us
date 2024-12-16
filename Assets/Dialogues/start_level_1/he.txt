@@ -1,0 +1,6 @@
+hide_canvas
+move||Player||-3,3;_;3,5
+move||Player||-3,4;_;3,5
+dialogue||player_name||¡¿Antonio?! ¿Cómo has acabado ahí encerrado?
+dialogue||Antonio||Por favor player_name, ayúdame a salir de aquí. Tienes que pulsar ese botón que hay ahí de alguna forma.
+dialogue||player_name||Vale, te sacaré de ahí.

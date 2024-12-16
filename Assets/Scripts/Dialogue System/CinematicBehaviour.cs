@@ -12,7 +12,13 @@ public class CinematicBehaviour : MonoBehaviour
 
     private InteractBehaviour objectThatInteract;
 
-    IEnumerator StartDialogue()
+    public void StartCinematic(InteractBehaviour interactBehaviour)
+    {
+        objectThatInteract = interactBehaviour;
+        StartCoroutine(StartCinematicCoroutine());
+    }
+
+    IEnumerator StartCinematicCoroutine()
     {
         yield return new WaitUntil(() => objectThatInteract.playerController.IsOnFloor());
         objectThatInteract.playerController.LockPlayer();
@@ -30,6 +36,6 @@ public class CinematicBehaviour : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         objectThatInteract = other.transform.GetChild(1).GetComponent<InteractBehaviour>();
-        StartCoroutine(StartDialogue());
+        StartCinematic(objectThatInteract);
     }
 }

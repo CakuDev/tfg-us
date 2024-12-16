@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 135563321022142955}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,9 @@ MonoBehaviour:
   speed: 100
   maxSpeed: 2
   checkYSpeed: 1
+  rotateWithMovement: 1
   rb: {fileID: 135563321022142955}
+  animators: []
   canMove: 1
 --- !u!54 &135563321022142955
 Rigidbody:

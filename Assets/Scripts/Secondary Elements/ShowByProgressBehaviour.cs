@@ -16,6 +16,7 @@ public class ShowByProgressBehaviour : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt(ProgressSave.INIT_GAME.ToString(), 1);
         conditions.ForEach(c => CheckCondition(c));
     }
 

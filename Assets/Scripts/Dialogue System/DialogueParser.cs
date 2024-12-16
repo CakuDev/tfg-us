@@ -54,6 +54,7 @@ public class DialogueParser : MonoBehaviour
     {
         string name = lineSplit[1] == PLAYER_NAME_IN_DIALOGUE ? gameController.playerName : lineSplit[1];
         string text = lineSplit[2];
+        text = text.Replace(PLAYER_NAME_IN_DIALOGUE, gameController.playerName);
         return new(this, defaultTextSpeed, skipTextSpeed, name, text, dialogueCanvas, nameText, dialogueText);
     }
 
@@ -62,11 +63,14 @@ public class DialogueParser : MonoBehaviour
 
         MovementBehaviour movementBehaviour = GameObject.Find(lineSplit[1]).GetComponent<MovementBehaviour>();
         string[] positionString = lineSplit[2].Split(POSITION_SEPARATOR);
-        float xCord = positionString[0] != SAME_CORD ? float.Parse(positionString[0]) : movementBehaviour.transform.position.x;
-        float yCord = positionString[1] != SAME_CORD ? float.Parse(positionString[1]) : movementBehaviour.transform.position.y;
-        float zCord = positionString[2] != SAME_CORD ? float.Parse(positionString[2]) : movementBehaviour.transform.position.z;
+        bool checkX = positionString[0] != SAME_CORD;
+        bool checkY = positionString[1] != SAME_CORD;
+        bool checkZ = positionString[2] != SAME_CORD;
+        float xCord = checkX ? float.Parse(positionString[0]) : movementBehaviour.transform.position.x;
+        float yCord = checkY ? float.Parse(positionString[1]) : movementBehaviour.transform.position.y;
+        float zCord = checkZ ? float.Parse(positionString[2]) : movementBehaviour.transform.position.z;
         Vector3 positionToMove = new(xCord, yCord, zCord);
-        return new(movementBehaviour, positionToMove);
+        return new(movementBehaviour, positionToMove, checkX, checkY, checkZ);
     }
 
     private CinematicHideCanvas ParseCinematicHideCanvas()

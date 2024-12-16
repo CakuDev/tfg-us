@@ -28,7 +28,6 @@ public class TidyObjectBehaviour : InteractiveItem
         if (tidyObject.activeSelf) return;
 
         base.OnInteract(objectThatInteract);
-        PlayerPrefs.SetInt(SAVE_PREFIX + gameObject.name, 1);
         StartCoroutine(TidyObject());
     }
 
@@ -61,5 +60,6 @@ public class TidyObjectBehaviour : InteractiveItem
 
         blackScreen.gameObject.SetActive(false);
         objectThatInteract.playerController.UnlockPlayer();
+        PlayerPrefs.SetInt(SAVE_PREFIX + gameObject.name, 1);
     }
 }

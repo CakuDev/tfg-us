@@ -1,0 +1,4 @@
+hide_canvas
+move||Player||1,62;_;4,12
+move||Player||1,62;_;4,22
+dialogue||player_name||A seguir saltandoooo.

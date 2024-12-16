@@ -1,0 +1,4 @@
+hide_canvas
+move||Player||4,56;_;6,47
+move||Player||4,56;_;6,53
+dialogue||player_name||Venga que me vengo arriba con los saltooooos.

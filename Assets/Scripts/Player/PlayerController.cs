@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void ManageJump()
     {
-        if (!Input.GetKeyDown(KeyCode.Space)) return;
+        if (!movementBehaviour.canMove || !Input.GetKeyDown(KeyCode.W)) return;
 
         jumpBehaviour.Jump();
     }
@@ -80,5 +80,10 @@ public class PlayerController : MonoBehaviour
     public bool IsOnFloor()
     {
         return jumpBehaviour.isOnFloor;
+    }
+
+    public void EnableJump()
+    {
+        jumpBehaviour.canJump = true;
     }
 }

@@ -59,21 +59,27 @@ public class MovementBehaviour : MonoBehaviour
         }
     }
 
-    public bool MoveToPosition(Vector3 objective)
+    public bool MoveToPosition(Vector3 objective, bool checkX, bool checkY, bool checkZ)
     {
         if (!canMove) return true;
 
+        if (!checkX) objective.x = transform.position.x;
+        if (!checkY) objective.y = transform.position.y;
+        if (!checkZ) objective.z = transform.position.z;
         Vector3 newPosition = Vector3.MoveTowards(transform.position, objective, maxSpeed * Time.fixedDeltaTime);
         transform.position = newPosition;
 
         // Rotate character
         if (rotateWithMovement && !Vector3.zero.Equals(objective - transform.position))
         {
-            Quaternion rotation = Quaternion.LookRotation(objective - transform.position);
+            Vector3 rotationVector = objective - transform.position;
+            if (!checkYSpeed) rotationVector.y = 0;
+            Quaternion rotation = Quaternion.LookRotation(rotationVector);
             rb.MoveRotation(rotation);
         }
-
-        bool objectiveReached = newPosition == objective;
+        Debug.Log(newPosition);
+        Debug.Log(objective);
+        bool objectiveReached = transform.position == objective;
         animators.ForEach(animator => animator.SetBool("is_walking", !objectiveReached));
         return objectiveReached;
     }

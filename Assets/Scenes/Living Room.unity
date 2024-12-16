@@ -6273,6 +6273,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9329766360a969f4d91b09c85b9b77e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1639274092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3818415280964709861, guid: 962c71f7a0490f24a89ce180d7d89fce, type: 3}
+  m_PrefabInstance: {fileID: 1639274090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baaa57dc087711f42adf5f064236863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1668666419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8505,6 +8516,71 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 1.2583259, z: 0.84512854}
   m_Center: {x: 0.00000023841858, y: 0.62916297, z: -0.047564372}
+--- !u!1001 &5273495204893247388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1296172911418029334, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: interactBehaviour
+      value: 
+      objectReference: {fileID: 1639274092}
+    - target: {fileID: 2347724056883428394, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 362879059}
+    - target: {fileID: 2400621359336151590, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_Name
+      value: Cleaned House Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.8316932
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22134697
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16575074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b70c92a010116a04e99f121002603ddb, type: 3}
 --- !u!1001 &6229189127751330343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8519,7 +8595,7 @@ PrefabInstance:
       objectReference: {fileID: 1120773816}
     - target: {fileID: 6548448364680581398, guid: 7ee315d53c91db244a6e14da93ac22dd, type: 3}
       propertyPath: m_Name
-      value: Interactive Cabinet
+      value: Interactive Cabinet Living Room
       objectReference: {fileID: 0}
     - target: {fileID: 7801031541050903975, guid: 7ee315d53c91db244a6e14da93ac22dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8622,3 +8698,4 @@ SceneRoots:
   - {fileID: 1307359264}
   - {fileID: 958459882}
   - {fileID: 2003729971}
+  - {fileID: 5273495204893247388}

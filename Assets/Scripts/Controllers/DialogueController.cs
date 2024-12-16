@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using UnityEngine;
 using TMPro;
+using System.Text;
 
 
 public class DialogueController : MonoBehaviour
@@ -44,11 +45,12 @@ public class DialogueController : MonoBehaviour
     {
         List<string> dialogueLines = new();
 
-        StreamReader reader = new (filePath);
-        
+        StreamReader reader = new (filePath); // Encoding.GetEncoding(1252) ANSI Encoding
+
         string line;
         while ((line = reader.ReadLine()) != null)
         {
+            Debug.Log(line);
             dialogueLines.Add(line);
         }
 

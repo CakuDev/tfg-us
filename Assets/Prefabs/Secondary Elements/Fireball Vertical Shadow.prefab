@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 7761130584949857597}
   - component: {fileID: 1228611643505545536}
   - component: {fileID: 135563321022142955}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Fireball Vertical Shadow
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

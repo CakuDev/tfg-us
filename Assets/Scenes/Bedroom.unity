@@ -814,6 +814,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3e74b48aebee34fb9f9c9bc5d9d607, type: 3}
+--- !u!1001 &571359818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1296172911418029334, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: interactBehaviour
+      value: 
+      objectReference: {fileID: 602049273}
+    - target: {fileID: 2347724056883428394, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 1041236585}
+    - target: {fileID: 2400621359336151590, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_Name
+      value: Cleaned House Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.8316932
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22134697
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16575074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309815438582973260, guid: b70c92a010116a04e99f121002603ddb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b70c92a010116a04e99f121002603ddb, type: 3}
 --- !u!1 &578670429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3839276947903147870, guid: 464843f5d17ce684dba0b948753cfc16, type: 3}
@@ -843,6 +908,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2845772474343830131, guid: 4a53bebbffe8c2a44a7fda29572acd9f, type: 3}
   m_PrefabInstance: {fileID: 8799562388084370009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &602049273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3818415280964709861, guid: 962c71f7a0490f24a89ce180d7d89fce, type: 3}
+  m_PrefabInstance: {fileID: 705116314}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baaa57dc087711f42adf5f064236863d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &622063797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a15f25e5ccf23d448c1636c93b00786, type: 3}
@@ -1936,8 +2012,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49856174, y: 0.50909626, z: 0.47793114}
-  m_Center: {x: -0.0147482455, y: 0.24545187, z: -0.7797751}
+  m_Size: {x: 0.49856174, y: 0.50909626, z: 0.657727}
+  m_Center: {x: -0.0147482455, y: 0.24545187, z: -0.68987715}
 --- !u!114 &1225021791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3756,3 +3832,4 @@ SceneRoots:
   - {fileID: 1225021794}
   - {fileID: 609239953245822507}
   - {fileID: 1806347688}
+  - {fileID: 571359818}
