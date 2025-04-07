@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90da0461312a7746b800d9435215253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitScene: MainMenu
   pauseCanvas: {fileID: 2397146364307542797}
   optionsCanvas: {fileID: 627069885147282418}
   sceneController: {fileID: 0}

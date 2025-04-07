@@ -1,0 +1,7 @@
+hide_canvas
+move||Main Camera||15,7;6;4,2
+move||Player||15,7;_;8,8
+move||Player||_;_;8,9
+dialogue||player_name||¡Víctor!
+dialogue||Víctor||¡Hola, player_name! Gracias por venir a rescatarme. ¿Sabes dónde están los demás?
+dialogue||player_name||Contigo estamos ya todos a salvo. Vamos al claro del bosque con los demás.

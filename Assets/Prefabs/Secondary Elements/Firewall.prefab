@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6650270605624822013}
   - component: {fileID: 5774359556367260166}
   - component: {fileID: 4209405752549203242}
+  - component: {fileID: 8283632358155272188}
   - component: {fileID: 99792802952496134}
   m_Layer: 0
   m_Name: Firewall
@@ -106,8 +107,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2.0000005
+  m_Radius: 0.4
+  m_Height: 1.9
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5774359556367260166
@@ -143,6 +144,18 @@ MonoBehaviour:
   rb: {fileID: 99792802952496134}
   animators: []
   canMove: 1
+--- !u!114 &8283632358155272188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572601322804158282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b1feb64874b7d4cb667906d0d07dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &99792802952496134
 Rigidbody:
   m_ObjectHideFlags: 0

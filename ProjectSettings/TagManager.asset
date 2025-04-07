@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Trunk
+  - Destroyable
   layers:
   - Default
   - TransparentFX

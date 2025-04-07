@@ -1,6 +1,0 @@
-dialogue||Prueba||Esto es un diálogo de prueba comenzado por un hombre.
-dialogue||player_name||¡Hola yo!
-hide_canvas
-move||Player||-1;_;3
-dialogue||Caku||Este diálogo va a ser excesivamente largo para probar la funcionalidad del skip. Para ver este diálogo más rápido puedes pulsar "Espacio" y verás como acaba mucho antes. Espero que le hayas dado y esto ya esté a una velocidad impresionante y mucho más placentera para tu impaciencia. De verdad que me imagino a gente pulsando la tecla conocida comúnmente como "Espacio" para que este diálogo se acabe ya.
-dialogue||Caku||¡Chao!

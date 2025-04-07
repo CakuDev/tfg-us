@@ -1,4 +1,0 @@
-hide_canvas
-move||Player||0,58;_;1,67
-move||Player||0,58;_;1,77
-dialogue||player_name||A cruzar el río vamonooooo.

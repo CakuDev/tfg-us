@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,11 +16,14 @@ public struct SpawnPoint
 
 public class SceneController : MonoBehaviour
 {
+    public static bool isLoading = true;
+
     [SerializeField] private bool saveSceneDataOnLoad = true;
     [SerializeField] private float changeSceneSpeed = 2.5f;
     public PlayerController player;
     public SpawnPoint[] spawnPoints;
     [SerializeField] Image changeSceneImage;
+    [SerializeField] AudioSource changeSceneSfx;
 
     private GameController gameController;
     private Dictionary<string, Transform> spawnPointsDict = new();
@@ -36,7 +40,7 @@ public class SceneController : MonoBehaviour
     void Start()
     {
         gameController = SingletonBehaviour.GetEntity(SingletonBehaviour.GAME_CONTROLLER).GetComponent<GameController>();
-
+        
         // If there is a previous scene, load its corresponding player position
         if ( player != null && gameController.previousScene != "" && spawnPointsDict.ContainsKey(gameController.previousScene))
         {
@@ -51,12 +55,12 @@ public class SceneController : MonoBehaviour
         }
 
         StartCoroutine(OnLoadScene());
-        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     public void ChangeScene(string nextScene)
     {
         gameController.previousScene = SceneManager.GetActiveScene().name;
+        changeSceneSfx.Play();
         StartCoroutine(OnChangeScene(nextScene));
     }
 
@@ -77,7 +81,8 @@ public class SceneController : MonoBehaviour
 
     IEnumerator OnLoadScene()
     {
-        if(player != null) player.LockPlayer();
+        isLoading = true;
+        if (player != null) player.LockPlayer();
 
         changeSceneImage.gameObject.SetActive(true);
         Color imageColor = changeSceneImage.color;
@@ -90,5 +95,6 @@ public class SceneController : MonoBehaviour
 
         if (player != null) player.UnlockPlayer();
         changeSceneImage.gameObject.SetActive(false);
+        isLoading = false;
     }
 }

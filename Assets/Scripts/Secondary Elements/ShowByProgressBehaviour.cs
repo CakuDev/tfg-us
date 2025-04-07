@@ -14,9 +14,8 @@ public class ShowByProgressBehaviour : MonoBehaviour
 {
     [SerializeField] private List<Condition> conditions;
 
-    void Start()
+    void Awake()
     {
-        PlayerPrefs.SetInt(ProgressSave.INIT_GAME.ToString(), 1);
         conditions.ForEach(c => CheckCondition(c));
     }
 

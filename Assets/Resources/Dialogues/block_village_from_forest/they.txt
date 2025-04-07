@@ -1,0 +1,3 @@
+dialogue||player_name||Antes de volver al pueblo debería salvar a los demás.
+hide_canvas
+move_relative||Player||_;_;1

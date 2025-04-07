@@ -4,5 +4,6 @@ using UnityEngine;
 
 public abstract class CinematicItem
 {
+    public bool isAsync = false;
     public abstract IEnumerator Action();
 }

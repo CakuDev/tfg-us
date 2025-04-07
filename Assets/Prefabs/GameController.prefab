@@ -62,7 +62,7 @@ MonoBehaviour:
   previousScene: -1
   currentHead: 2
   currentBody: 4
-  playerName: 
+  playerName: Caku
   playerGender: 0
 --- !u!114 &1790693822966042868
 MonoBehaviour:

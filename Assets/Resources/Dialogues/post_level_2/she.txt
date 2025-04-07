@@ -1,0 +1,22 @@
+hide_canvas
+move_relative||Player||_;_;-1
+move_relative||Player||_;_;0,1
+dialogue||player_name||Ya estamos en una zona segura.
+dialogue||Alba||Por fin a salvo... ¡Muchas gracias, player_name!
+dialogue||player_name||La verdad es que no sabía si sería capaz, pero ya eres la segunda persona que consigo salvar hoy.
+dialogue||player_name||Por cierto, ¿sabes algo sobre el monstruo de la depresión? Aún no sé a qué nos enfrentamos.
+dialogue||Alba||Sinceramente, no lo sé. Estaba durmiendo tranquilamente en casa y esta mañana desperté en esa celda.
+dialogue||Alba||Siento no poder ayudarte...
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Creo que puedo aclarar vuestras dudas sobre la depresión.
+dialogue||Psico||La depresión es un trastorno mental que nos produce sentimientos desagradables de manera constante, como la tristeza.
+dialogue||Psico||También puede producir cambios en el pensamiento y comportamiento.
+dialogue||Psico||Aunque cualquier persona puede experimentar sentimientos desagradables, la depresión produce que esta sensación sea recurrente a lo largo del tiempo y no algo puntual como sería normal.
+dialogue||player_name||Yo llevo sintiéndome triste y sin fuerzas desde hace unas semanas... Como si no tuviera ganas de hacer nada.
+dialogue||Psico||Pues a esa sensación se le conoce como depresión.
+dialogue||player_name||Vaya... ¿Y qué puedo hacer ahora para que desaparezca?
+dialogue||Psico||La depresión no es algo que desaparezca como un resfriado o un catarro. Es necesario el trabajo y la colaboración de la persona para poder hacerle frente.
+dialogue||player_name||¡Yo quiero hacerle frente, Psico!
+dialogue||Psico||Pues pongámonos rumbo al siguiente desafío, seguro que aprendemos mucho más si seguimos avanzando.
+dialogue||Psico||Parece que este bloqueo no ha desaparecido. Revisemos el otro lado del claro para ver si ha cambiado algo por allí.
+move_relative||Fairy Player||_;-0,5;-0,5

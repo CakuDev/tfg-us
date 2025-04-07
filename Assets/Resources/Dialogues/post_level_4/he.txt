@@ -1,0 +1,26 @@
+hide_canvas
+move_relative||Player||_;_;-0,5
+move_relative||Player||_;_;0,1
+dialogue||player_name||¡Ya estamos todos a salvo!
+dialogue||Víctor||¡Muchas gracias, player_name! Me alegra ver que todo el mundo está bien.
+dialogue||player_name||A mí también me alegra saber que nadie más está atrapado.
+dialogue||player_name||Oye, Psico. ¿Puedo hacerte una pregunta?
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Claro, player_name. Puedes preguntarme lo que quieras.
+dialogue||player_name||Desde hace unos meses tengo la sensación de estar solo.
+dialogue||player_name||Aunque esté rodeado de gente y hable con ellos, siento que no puedo establecer una conexión profunda con ellos.
+dialogue||player_name||Y, cuando estoy en casa, esa sensación de soledad aumenta, como si no fuera capaz de establecer una amistad con nadie.
+dialogue||player_name||¿Eso tiene algo que ver con la depresión?
+dialogue||Psico||La soledad es una sensación muy engañosa. Juntos hemos salvado a todos tus vecinos y los he visto muy alegres por verte.
+dialogue||player_name||Pero eso ha sido porque les he salvado... Seguro que cuando todo vuelva a la normalidad seguiré estando solo.
+dialogue||Víctor||Pero player_name, nosotros vamos a estar ahí para ti cuando nos necesites.
+dialogue||Víctor||Hace tiempo que todos te veíamos desanimados y hemos estado preocupados por ti desde entonces.
+dialogue||Víctor||Puede que la depresión no te haya dejado ver nuestra compañía, pero hemos estado y estaremos ahí para ti siempre que lo necesites.
+dialogue||Psico||La depresión puede hacerte ver lo que no es y encerrarte en ti mismo, pero siempre va a haber alguien preocupado por ti y dispuesto a ayudarte.
+dialogue||player_name||Tenéis razón. Creo que al centrarme tanto en mis sentimientos desagradables no era consciente de las personas de mi alrededor.
+dialogue||player_name||Gracias a los dos por hacerme ver la realidad.
+dialogue||Psico||Ya sabes que estamos aquí para lo que necesites.
+dialogue||Psico||El hecho de haberte abierto así con nosotros ya indica que has progresado mucho a lo largo de esta aventura.
+dialogue||Psico||Por cierto, si están todos los aldeanos aquí, ¿qué hay tras el bloqueo gigante que ha desaparecido en el centro del claro?
+dialogue||player_name||Vamos a comprobarlo.
+move_relative||Fairy Player||_;-0,5;-0,5

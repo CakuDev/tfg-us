@@ -1,0 +1,17 @@
+dialogue||player_name||¡¿Qué ha sido eso?!
+move_relative||Fairy Player||0,5;0,5;_
+dialogue||Psico||Parece que ha sonado por allí.
+move||Main Camera||-0,03;12;-1,6
+dialogue||Psico||Vaya, al pulsar el botón ha aparecido esa criatura al otro lado.
+dialogue||player_name||¿Crees que será peligroso?
+dialogue||Psico||Aunque lo fuese, este muro de piedra nos separa de él.
+dialogue||Psico||A lo mejor puede ayudarnos a pulsar el botón del otro lado para liberar a Ricardo.
+dialogue||player_name||¿Hola? ¿Puedes ayudarnos a pulsar el botón que tienes más adelante?
+dialogue||player_name||No se ha inmutado...
+dialogue||player_name||Voy a acercarme, a ver si no me ha escuchado.
+move_relative||Player||1;_;_||async
+move_relative||Dark Being||1;_;_
+dialogue||player_name||¡¿Qué?! Se ha movido igual que yo.
+dialogue||Psico||Parece que copia tu movimiento... Puede que así consigamos que pulse el botón.
+dialogue||player_name||Vale, voy a intentar conducirlo hasta el botón. Pero me da mal rollo...
+move_relative||Fairy Player||-0,5;-0,5;_

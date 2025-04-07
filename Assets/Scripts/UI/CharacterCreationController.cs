@@ -15,6 +15,7 @@ public class CharacterCreationController : MonoBehaviour
     [SerializeField] private Transform headContainer;
     [SerializeField] private Transform bodyContainer;
     [SerializeField] private SceneController sceneController;
+    [SerializeField] private GameObject requiredText;
 
     private int selectedHead = 0;
     private int selectedBody = 0;
@@ -70,15 +71,18 @@ public class CharacterCreationController : MonoBehaviour
 
     public void CreateCharacter()
     {
-        if (nameInput.text == null || nameInput.text.Length == 0 || !genderToggleGroup.AnyTogglesOn()) return;
-
+        if (nameInput.text == null || nameInput.text.Length == 0 || !genderToggleGroup.AnyTogglesOn())
+        {
+            requiredText.SetActive(true);
+            return;
+        }
         gameController.playerName = nameInput.text;
         gameController.playerGender = selectedGender;
         gameController.currentHead = selectedHead;
         gameController.currentBody = selectedBody;
 
         PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt(PersistentDataIndex.SAVE_GAME, 1);
+        PlayerPrefs.SetInt(ProgressSave.INIT_GAME.ToString(), 1);
 
         sceneController.ChangeScene(nextScene);
     }

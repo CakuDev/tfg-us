@@ -21,7 +21,7 @@ public class CleanedHouseController : MonoBehaviour
     private bool IsCleanedHouse()
     {
         return PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Bookshelf") &&
-            PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Table") &&
+               PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Table") &&
             PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Cabinet Living Room") &&
             PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Bed") &&
             PlayerPrefs.HasKey(TidyObjectBehaviour.SAVE_PREFIX + "Interactive Cabinet") && 

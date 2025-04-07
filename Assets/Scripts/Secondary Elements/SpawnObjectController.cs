@@ -56,6 +56,10 @@ public class SpawnObjectController : MonoBehaviour
         spawnedObject.transform.position = usedSpawnPoint.position;
         spawnedObject.transform.position = usedSpawnPoint.position;
         spawnedObject.GetComponent<ConstantMovementBehaviour>().StartMoving(directionToMove, objectSpeed);
+        if (usedSpawnPoint.TryGetComponent(out SpawnPointBehaviour spawnPointBehaviour))
+        {
+            spawnPointBehaviour.OnSpawn(spawnedObject);
+        }
         return usedSpawnPoint;
     }
 }

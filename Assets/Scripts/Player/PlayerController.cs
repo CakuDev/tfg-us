@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
     private void ManageMovement()
     {
         Vector3 movement = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        movement.Normalize();
         if(!jumpBehaviour.canJump) movementBehaviour.Move(movement);
     }
 

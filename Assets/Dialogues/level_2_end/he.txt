@@ -1,5 +1,0 @@
-dialogue||player_name||Pues ya hemos llegao.
-hide_canvas
-move||Player||20,52;_;16
-move||Player||20,52;_;17,45
-dialogue||player_name||¿Qué haces aquí Gonofredo?

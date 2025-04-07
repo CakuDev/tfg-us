@@ -1,0 +1,8 @@
+dialogue||player_name||¡Por fin está la casa está ordenada!
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||¿Cómo te sientes después de haber terminado esta tarea?
+dialogue||player_name||Pues pensaba que era una tontería, pero la verdad es que me siento más capaz después de esto.
+dialogue||Psico||Como te decía en la salida del pueblo, cualquier avance es un gran paso al enfrentarte al monstruo de la depresión.
+dialogue||Psico||Ahora que has conseguido recuperar parte de tu fuerza, seguro que esa barrera ha desaparecido.
+dialogue||player_name||¿De verdad? Vamos a comprobarlo.
+move_relative||Fairy Player||_;-0,5;-0,5

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class CinematicMovement : CinematicItem
 {
-    const float ERROR_MARGIN = 0.0001f;
-
     private MovementBehaviour objectToMove;
     private Vector3 positionToMove;
     private bool checkX;

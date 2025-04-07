@@ -10,7 +10,7 @@ public class LoadGameBehaviour : MonoBehaviour
 
     private void Start()
     {
-        if (!PlayerPrefs.HasKey(PersistentDataIndex.SAVE_GAME)) Destroy(gameObject);
+        //if (!PlayerPrefs.HasKey(PersistentDataIndex.SAVE_GAME)) Destroy(gameObject);
 
         gameController = SingletonBehaviour.GetEntity(SingletonBehaviour.GAME_CONTROLLER).GetComponent<GameController>();
     }

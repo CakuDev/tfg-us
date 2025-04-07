@@ -1,0 +1,17 @@
+hide_canvas
+move_relative||Player||_;_;-1
+move_relative||Player||_;_;0,1
+dialogue||Carlos||¡Por fin he podido estirar las piernas un poco! Pensaba que nunca saldría de allí.
+dialogue||player_name||Aquí puedes estar tranquilo, no hay ningún peligro.
+dialogue||Carlos||Muchas gracias, player_name. Te vi saltando por los troncos para cruzar el río, eres muy valiente.
+dialogue||player_name||Yo no diría que sea valiente. Si no fuese por Psico me hubiese quedado ahí atrapado.
+dialogue||player_name||Me daba mucho miedo seguir y pensaba que no podría salir de allí.
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Yo solo te ayudé a ver de lo que realmente eres capaz.
+dialogue||Psico||He notado que a lo largo de la aventura has estado menospreciándote y teniendo pensamientos sobre ti que no son ciertos.
+dialogue||player_name||Ahora que he conseguido hacer todo lo que he hecho veo que no tenía razón, que la visión que tenía de mí mismo no era correcta.
+dialogue||player_name||Pero en esos momentos no puedo evitarlo...
+dialogue||Psico||A eso se le llama una distorsión cognitiva. Esto ocurre cuando tu mente te convence de crear pensamientos desagradables e irreales sobre ti y lo que te rodea.
+dialogue||player_name||Vaya, no sabía que existían las distorsiones cognitivas. Ahora que me lo has explicado, es cierto que a veces me pasa.
+dialogue||player_name||Muchas gracias, Psico. ¡Vamos a por el siguiente desafío!
+move_relative||Fairy Player||_;-0,5;-0,5

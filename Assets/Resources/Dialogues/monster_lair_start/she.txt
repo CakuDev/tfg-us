@@ -1,0 +1,11 @@
+hide_canvas
+dialogue||player_name||Vaya, otro botón. Seguro que al pulsarlo comienza el próximo desafío.
+dialogue||player_name||Pero... Si no queda nadie para salvar, ¿qué hay al otro lado del bloqueo?
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Seguramente será su guarida.
+dialogue||player_name||¿La guarida del monstruo de la depresión? ¿Y cómo quieres que me enfrente a él?
+dialogue||Psico||Recuerda todo lo que has aprendido hasta llegar aquí, player_name.
+dialogue||Psico||Todos esos conocimientos te ayudarán contra él.
+dialogue||player_name||¿Estarás a mi lado cuando llegue el momento?
+dialogue||Psico||Por supuesto, player_name. Estaré a tu lado para ayudarte.
+dialogue||player_name||Superemos este último desafío y enfrentémonos a él.

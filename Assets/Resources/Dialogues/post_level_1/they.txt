@@ -1,0 +1,18 @@
+hide_canvas
+move_relative||Player||_;_;-1
+move_relative||Player||_;_;0,1
+dialogue||player_name||No me creo que haya conseguido salvarte, Ricardo.
+dialogue||Ricardo||Pues lo has hecho y estoy muy agradecido contigo, player_name.
+dialogue||player_name||Pero, ¿y esa cosa que se movía igual que yo? Tenía el mismo color que los bloqueos del monstruo...
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Efectivamente, era un esbirro del monstruo de la depresión.
+dialogue||player_name||Y hacía lo mismo que yo... ¿Eso quiere decir que la depresión y yo somos lo mismo?
+dialogue||Psico||Para nada. La depresión nos puede hacer ver o pensar cosas que no son, pero no debes dejarte engañar.
+dialogue||Psico||Existe un término muy importante a la hora de enfrentarte a la depresión: el autoconcepto.
+dialogue||Psico||El autoconcepto es la percepción que tenemos de nosotres mismes. No debes dejar que la depresión la protagonice.
+dialogue||Psico||Eres player_name y todos tus rasgos que te forman como persona. Eres mucho más que un trastorno.
+dialogue||player_name||Tienes razón Psico, es importante saber quién soy y no dejarme llevar por estos pensamientos desagradables. Muchas gracias.
+dialogue||Psico||Recuerda que para eso estoy aquí, para ayudarte a avanzar en tu aventura.
+dialogue||player_name||Hablando de aventura, ¡el siguiente bloqueo ha desaparecido!
+dialogue||Psico||Pues vamos allá.
+move_relative||Fairy Player||_;-0,5;-0,5

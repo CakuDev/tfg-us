@@ -1,5 +1,0 @@
-hide_canvas
-move||Player||-3,3;_;3,5
-move||Player||-3,4;_;3,5
-dialogue||player_name||¡Ya eres libre Antonio!
-dialogue||Antonio||Gracias player_name, volvamos al claro del bosque.

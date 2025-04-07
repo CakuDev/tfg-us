@@ -20,4 +20,19 @@ public class FollowObject : MonoBehaviour
         if (moveOnZ) position.z = objectToFollow.position.z + offset.z;
         transform.position = position;
     }
+
+    public void SetMoveOnX(bool moveOnX)
+    {
+        this.moveOnX = moveOnX;
+    }
+
+    public void SetMoveOnY(bool moveOnY)
+    {
+        this.moveOnY = moveOnY;
+    }
+
+    public void SetMoveOnZ(bool moveOnZ)
+    {
+        this.moveOnZ = moveOnZ;
+    }
 }

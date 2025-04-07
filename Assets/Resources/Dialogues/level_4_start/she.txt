@@ -1,0 +1,3 @@
+hide_canvas
+move||Main Camera||_;8,69;_
+dialogue||player_name||Ahora barreras... Creo que utilizando los espacios que hay en la parte superior e inferior de las ruinas podré avanzar.

@@ -8,6 +8,7 @@ public class JumpBehaviour : MonoBehaviour
     [SerializeField] private Vector3 jumpDirection;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private List<Animator> animators;
+    [SerializeField] private AudioSource jumpSfx;
 
     public bool canJump = false;
     [HideInInspector] public bool isOnFloor = true;
@@ -15,7 +16,8 @@ public class JumpBehaviour : MonoBehaviour
     public void Jump()
     {
         if (!isOnFloor || !canJump) return;
-
+        
+        jumpSfx.Play();
         animators.ForEach(animator => animator.SetBool("is_jumping", true));
         rb.velocity = Vector3.zero;
         rb.AddForce(jumpForce * jumpDirection.normalized,ForceMode.Impulse);
@@ -25,7 +27,7 @@ public class JumpBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (isOnFloor) return;
-        if (!collision.transform.CompareTag("Floor") && !collision.transform.CompareTag("Trunk")) return;
+        if (!collision.transform.CompareTag("Floor") && !collision.transform.CompareTag("Destroyable")) return;
         
         animators.ForEach(animator => animator.SetBool("is_jumping", false));
         isOnFloor = true;

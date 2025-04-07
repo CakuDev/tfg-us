@@ -1,0 +1,9 @@
+hide_canvas
+move||Player||0,58;_;1,67
+move||Player||0,58;_;1,77
+dialogue||player_name||No sabía que pasaba un río por el bosque. ¿Cómo vamos a continuar ahora?
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||La única manera posible es cruzar saltando por los troncos y las piedras.
+dialogue||player_name||Antes esferas y ahora troncos... Si no queda otra opción, habrá que cruzar saltando.
+move_relative||Fairy Player||_;-0,5;-0,5
+dialogue||Tutorial||Pulsa W para saltar hacia delante. No podrás realizar otra acción hasta llegar al otro lado del río.

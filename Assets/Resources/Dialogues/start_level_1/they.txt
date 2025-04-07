@@ -1,0 +1,9 @@
+hide_canvas
+move||Player||-3,3;_;3,5
+move||Player||-3,4;_;3,5
+dialogue||player_name||¡¿Ricardo?! ¿Cómo has acabado ahí encerrado?
+dialogue||Ricardo||Todo fue muy rápido, player_name. Anoche estaba durmiendo en casa cuando, de repente, escuché un ruido.
+dialogue||Ricardo||Cuando me quise dar cuenta, perdí el conocimiento y, más tarde, desperté aquí atrapado.
+dialogue||player_name||No te preocupes Ricardo, te sacaré de ahí.
+dialogue||Ricardo||Muchas gracias, player_name. Creo que necesitas pulsar el botón que hay ahí delante, pero no se puede llegar a ese lado de las ruinas.
+dialogue||player_name||Debe de haber una manera, voy a investigar.

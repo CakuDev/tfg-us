@@ -17,7 +17,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private DialogueParser dialogueParser;
 
     private GameController gameController;
-    private const string DIALOGUE_FOLDER = "/Dialogues/";
+    private const string DIALOGUE_FOLDER = "Dialogues/";
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class DialogueController : MonoBehaviour
 
     public Coroutine StartDialogue(string fileName)
     {
-        string filePath = Application.dataPath + DIALOGUE_FOLDER + fileName + "/" + gameController.playerGender.ToString().ToLower() + ".txt";
+        string filePath = DIALOGUE_FOLDER + fileName + "/" + gameController.playerGender.ToString().ToLower();
         List<CinematicItem> dialogueLines = ReadDialogueFile(filePath);
         dialogueCanvas.SetActive(true);
         return StartCoroutine(ShowDialogue(dialogueLines));
@@ -36,21 +36,27 @@ public class DialogueController : MonoBehaviour
     {
         foreach (CinematicItem cinematicItem in dialogueLines)
         {
-            yield return StartCoroutine(cinematicItem.Action());
+            if(cinematicItem == null) continue;
+
+            if (cinematicItem.isAsync)
+            {
+                StartCoroutine(cinematicItem.Action());
+            }
+            else
+            {
+                yield return StartCoroutine(cinematicItem.Action());
+            }
         }
         dialogueCanvas.SetActive(false);
     }
 
     private List<CinematicItem> ReadDialogueFile(string filePath)
     {
+        TextAsset file = Resources.Load<TextAsset>(filePath);
         List<string> dialogueLines = new();
-
-        StreamReader reader = new (filePath); // Encoding.GetEncoding(1252) ANSI Encoding
-
-        string line;
-        while ((line = reader.ReadLine()) != null)
+        string[] lines = file.text.Split("\r\n");
+        foreach (var line in lines)
         {
-            Debug.Log(line);
             dialogueLines.Add(line);
         }
 

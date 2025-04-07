@@ -1,0 +1,4 @@
+dialogue||player_name||Qué silencio más raro. ¿Dónde está todo el mundo?
+move||Player||0,468;_;-0,648
+move||Player||1;_;-0,648
+dialogue||player_name||A lo mejor se han ido al bosque. Debería ir a ver si está todo bien.

@@ -8,6 +8,7 @@ public class CinematicBehaviour : MonoBehaviour
 {
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private string fileName;
+    [SerializeField] private UnityEvent onCinematicStart;
     [SerializeField] private UnityEvent onCinematicEnd;
 
     private InteractBehaviour objectThatInteract;
@@ -20,12 +21,12 @@ public class CinematicBehaviour : MonoBehaviour
 
     IEnumerator StartCinematicCoroutine()
     {
+        yield return new WaitUntil(() => SceneController.isLoading == false);
         yield return new WaitUntil(() => objectThatInteract.playerController.IsOnFloor());
+        onCinematicStart.Invoke();
         objectThatInteract.playerController.LockPlayer();
 
-        Debug.Log("Movement Blocked!");
         yield return dialogueController.StartDialogue(fileName);
-        Debug.Log("Dialogue ended!");
         objectThatInteract.playerController.UnlockPlayer();
         onCinematicEnd.Invoke();
         Destroy(gameObject);

@@ -1,0 +1,9 @@
+dialogue||player_name||¡¿Y esas esferas?!
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Parece que están creadas por el monstruo, no te recomiendo tocarlas.
+dialogue||player_name||Y si no las puedo tocar, ¿cómo vamos a avanzar? Seguro que al final hay alguien atrapado.
+dialogue||Psico||Vas a tener que avanzar con cuidado. Si te fijas bien, siempre hay un espacio entre las esferas.
+dialogue||player_name||¿De verdad quieres que pase por ahí? No voy a ser capaz.
+dialogue||Psico||Yo confío en ti, player_name. Ahora te parecerá una locura, pero con la confianza suficiente seguro que llegas al otro lado.
+dialogue||player_name||Si tú lo dices... Voy a intentarlo, pero no prometo nada.
+move_relative||Fairy Player||_;-0,5;-0,5

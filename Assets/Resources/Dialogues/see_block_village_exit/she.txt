@@ -1,0 +1,25 @@
+hide_canvas
+move||Player||23,5;_;9,7
+move||Player||23,5;_;9,8
+dialogue||player_name||¿Qué es esta cosa que bloquea la salida del pueblo?
+dialogue||¿?||Es un bloqueo creado por el monstruo de la depresión para evitar que llegues al bosque.
+dialogue||player_name||¿Eh? ¿Quién ha dicho eso?
+hide_canvas
+move||Fairy Object||23,5;0,65;10,15
+move||Fairy Object||23,5;0,65;10,1
+dialogue||Psico||Soy Psico, un hada que quiere ayudarte a superar los desafíos que vas a encontrarte en tu camino.
+dialogue||player_name||Yo soy player_name, encantada. ¿Cuáles son esos desafíos que comentas? ¿Dónde está todo el mundo?
+dialogue||Psico||El monstruo de la depresión ha capturado a los demás en el bosque, pero juntos podremos salvarlos.
+dialogue||player_name||¿Juntos? Yo no soy capaz de enfrentarme a ningún monstruo...
+dialogue||Psico||Puede que ahora pienses eso, pero estoy aquí para que descubras que no es así.
+dialogue||player_name||No estoy yo tan seguro de eso...
+dialogue||Psico||Vamos a empezar con algo sencillo: Destruir este bloqueo que impide el acceso al bosque.
+dialogue||player_name|| ¿Sencillo? ¿Destruir ese muro morado gigante? No tengo ni idea de cómo hacerlo.
+dialogue||Psico||Para eso estoy aquí, para ayudarte a descubrir el camino.
+dialogue||Psico||La fuerza del monstruo de la depresión reside en esas cosas que no queremos hacer, en la pereza, la desgana, el pesimismo...
+dialogue||Psico||¿Hay algo que te produzca alguna de estas sensaciones?
+dialogue||player_name||Pues ahora que lo dices, sí. Llevo días sin ordenar mi casa, pero pensaba que no era para tanto.
+dialogue||Psico||Hasta las cosas que creas insignificantes pueden alimentar la fuerza del monstruo de la depresión.
+dialogue||Psico||Si consigues ordenar tu casa, su fuerza disminuirá y la tuya aumentará.
+dialogue||player_name||Bueno, pues vamos allá.
+move||Fairy Object||23,5;0,35;9,8

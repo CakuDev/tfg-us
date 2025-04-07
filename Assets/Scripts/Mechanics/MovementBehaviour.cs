@@ -15,6 +15,11 @@ public class MovementBehaviour : MonoBehaviour
 
     public bool canMove = true;
 
+    public void CanMove(bool canMove)
+    {
+        this.canMove = canMove;
+    }
+
     public void Move(Vector3 movementDirection)
     {
         if (!canMove) 
@@ -77,8 +82,6 @@ public class MovementBehaviour : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(rotationVector);
             rb.MoveRotation(rotation);
         }
-        Debug.Log(newPosition);
-        Debug.Log(objective);
         bool objectiveReached = transform.position == objective;
         animators.ForEach(animator => animator.SetBool("is_walking", !objectiveReached));
         return objectiveReached;
@@ -91,6 +94,7 @@ public class MovementBehaviour : MonoBehaviour
 
     public void Stop()
     {
+        animators.ForEach(animator => animator.SetBool("is_walking", false));
         rb.velocity = Vector3.zero;
     }
 }

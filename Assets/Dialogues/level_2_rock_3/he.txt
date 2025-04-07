@@ -1,4 +1,0 @@
-hide_canvas
-move||Player||9,8;_;8,9
-move||Player||9,8;_;9
-dialogue||player_name||¿Ahora pa dónde voy? Vaya miedo más grande me ha entrao en el cuerpo.

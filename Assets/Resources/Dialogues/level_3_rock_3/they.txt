@@ -1,0 +1,8 @@
+hide_canvas
+move||Player||9,8;_;8,9
+move||Player||9,8;_;9
+dialogue||player_name||¿Y la siguiente piedra? No puedo seguir si no sé dónde está la siguiente piedra.
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Pero siguen viniendo troncos. Seguro que puedes seguir saltando hasta la otra orilla.
+dialogue||player_name||Vale, voy a seguir saltando. Espero que no quede mucho.
+move_relative||Fairy Player||_;-0,5;-0,5

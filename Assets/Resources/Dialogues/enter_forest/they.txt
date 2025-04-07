@@ -1,0 +1,17 @@
+dialogue||player_name||Ya estamos en el bosque. ¿Dónde estarán les demás?
+move||Player||0,9;_;-2,4
+dialogue||player_name||Vaya, ¿otro bloqueo?
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Parece que el monstruo no quiere que avancemos por el bosque.
+dialogue||player_name||¿Y qué hacemos?
+dialogue||Psico||Mira, hay varios caminos. Puede que alguno no esté bloqueado.
+move_relative||Fairy Player||_;-0,5;-0,5
+move||Player||-5,8;_;_
+move||Player||_;_;-2
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||player_name||Tenías razón, Psico. Aquí no hay ningún bloqueo.
+dialogue||Psico||Este camino nos conducirá a tu siguiente prueba. 
+dialogue||player_name||¿Y en qué consiste esta prueba?
+dialogue||Psico||No lo sé, tendrás que avanzar para descubrirlo.
+dialogue||player_name||Me da miedo no saber qué me depara más adelante, pero aún así tengo que seguir avanzando.
+move_relative||Fairy Player||_;-0,5;-0,5

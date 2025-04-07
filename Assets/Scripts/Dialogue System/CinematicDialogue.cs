@@ -13,10 +13,11 @@ public class CinematicDialogue : CinematicItem
     private GameObject dialogueCanvas;
     private TMP_Text nameText;
     private TMP_Text dialogueText;
+    private AudioSource textSfx;
 
     private float currentSpeed;
 
-    public CinematicDialogue(DialogueParser dialogueParser, float defaultSpeed, float skipSpeed, string name, string text, GameObject dialogueCanvas, TMP_Text nameText, TMP_Text dialogueText)
+    public CinematicDialogue(DialogueParser dialogueParser, float defaultSpeed, float skipSpeed, string name, string text, GameObject dialogueCanvas, TMP_Text nameText, TMP_Text dialogueText, AudioSource textSfx)
     {
         this.dialogueParser = dialogueParser;
         this.defaultSpeed = defaultSpeed;
@@ -26,6 +27,7 @@ public class CinematicDialogue : CinematicItem
         this.dialogueCanvas = dialogueCanvas;
         this.nameText = nameText;
         this.dialogueText = dialogueText;
+        this.textSfx = textSfx;
     }
 
     public override IEnumerator Action()
@@ -38,6 +40,7 @@ public class CinematicDialogue : CinematicItem
         foreach (char c in text)
         {
             dialogueText.text += c;
+            textSfx.Play();
             yield return new WaitForSeconds(currentSpeed);
         }
 

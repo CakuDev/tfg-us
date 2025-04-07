@@ -1,0 +1,5 @@
+hide_canvas
+move||Main Camera||-2,5;7;-1
+dialogue||player_name||¡Ya eres libre, Ricardo!
+dialogue||Ricardo||Muchas gracias player_name, no sé qué hubiera hecho si no hubieras aparecido.
+dialogue||player_name||Volvamos al claro del bosque.

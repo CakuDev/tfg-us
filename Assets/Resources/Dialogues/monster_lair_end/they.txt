@@ -1,0 +1,36 @@
+hide_canvas
+move||Player||0,5;_;8
+move||Player||0,5;_;8,1
+dialogue||player_name||¿Qué es eso? Es enorme...
+move_relative||Fairy Player||_;0,5;0,5
+dialogue||Psico||Es el monstruo de la depresión.
+dialogue||player_name||Es demasiado grande, no podemos hacer nada contra él.
+dialogue||Psico||No dejes que su tamaño te asuste. Recuerda todo lo que has aprendido hasta llegar aquí.
+dialogue||player_name||¿Y para qué sirve todo lo que he aprendido contra este monstruo?
+dialogue||Psico||¿Recuerdas lo primero que te dije para destruir el bloqueo en la entrada del pueblo?
+dialogue||player_name||El monstruo de la depresión se alimenta de los sentimientos desagradables...
+dialogue||Psico||Exacto. Cierra los ojos y respira hondo. Utiliza las herramientas que has aprendido a lo largo de la aventura.
+dialogue||Psico||Todos los conceptos aprendidos te ayudarán en este momento.
+dialogue||player_name||¿Y cómo me ayudarán a destruir al monstruo?
+dialogue||Psico||Tu labor aquí no es vencerlo, ahora mismo es demasiado poderoso para acabar con él.
+dialogue||Psico||Pero sí puedes aprender a vivir con él. Conseguir gestionar tus sentimientos y no dejar que te domine.
+dialogue||Psico||Tienes que dominarlo tú a él.
+dialogue||player_name||Convivir con el monstruo... ¿Seré capaz de hacerlo?
+dialogue||Psico||A lo largo de nuestra aventura me has demostrado lo valiente y fuerte que eres en realidad, player_name.
+dialogue||Psico||Sé que puedes hacerlo.
+dialogue||player_name||Vale. Voy a concentrarme. Cerrar los ojos y respirar hondo...
+scale||Monster||0,1||0,2;0,2;0,2
+dialogue||player_name||¡Vaya! Ahora no es tan grande.
+dialogue||Psico||Lo has conseguido, player_name. Enhorabuena.
+dialogue||player_name||¿Y ahora qué hacemos?
+dialogue||Psico||Ahora tienes que dar el último paso. Tienes que llevarlo contigo y convivir con el monstruo.
+dialogue||player_name||¿Llevarlo conmigo? Pero... ¿Y si vuelve a crecer y ser una amenaza para todos?
+dialogue||Psico||Puede que en ciertos momentos parezca que recupera su poder pero, gracias a todas las herramientas que has aprendido, serás capaz de impedírselo.
+dialogue||Psico||Y recuerda que estaré aquí siempre que lo necesites para ayudarte a aumentar tu conocimiento.
+dialogue||player_name||Muchas gracias por todo, Psico... Ahora volvamos con les demás, seguro que se llevarán una sorpresa cuando vean esto.
+hide_canvas
+move_relative||Fairy Player||_;-0,5;-0,5
+move||Player||_;_;10
+destroy||Monster
+destroy||See Monster Lair End Cinematic
+move||Player||_;_;0
