@@ -1,3 +1,4 @@
+hide_canvas
 move||Player||22;_;8,7
 dialogue||player_name||¿Qué haces aquí, Alba? ¿A ti también te ha encerrado el monstruo?
 dialogue||Alba||¡Hola player_name! Sí, menos mal que has venido. Llevo aquí todo el día.
